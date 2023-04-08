@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cp emxxx.service /etc/systemd/system/
+rm /lib/systemd/system/serial-getty@.service
+rm -r /lib/systemd/system/serial-getty@.service.d
+
+cp -r ../siot-swarm-uservice-emxxx/* /etc/fogdevice/uservice/emxxx
