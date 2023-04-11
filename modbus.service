@@ -1,0 +1,12 @@
+[Unit]
+Description=Modbus Readout Service
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/home/pi/Modbus-Template/linux-driver-modbus
+ExecStart=/usr/bin/python3 Auslesung_Modbus.py
+
+[Install]
+WantedBy=multi-user.target
